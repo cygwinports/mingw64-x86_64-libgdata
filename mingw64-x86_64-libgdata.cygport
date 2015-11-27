@@ -1,0 +1,22 @@
+CROSS_HOST="x86_64-w64-mingw32"
+ORIG_PN="libgdata"
+inherit cross gnome2
+
+NAME="mingw64-x86_64-libgdata"
+VERSION=0.17.3
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="GObject Google services library for Win64 toolchain"
+DESCRIPTION="libgdata is a GLib-based library for accessing online service APIs
+using the GData protocol -- most notably, Google's services. It provides APIs
+to access the common Google services, and has full asynchronous support."
+HOMEPAGE="http://live.gnome.org/libgdata"
+
+PATCH_URI="
+	https://raw.githubusercontent.com/Alexpux/MINGW-packages/master/mingw-w64-libgdata/0002-symbols.patch#/libgdata-0.15.2-symbols.patch
+	https://raw.githubusercontent.com/Alexpux/MINGW-packages/master/mingw-w64-libgdata/0003-wsock.patch#/libgdata-0.15.2-winsock.patch
+"
+
+DIFF_EXCLUDES="gdata.types ax_*.m4"
+
+CYGCONF_ARGS="--disable-always-build-tests --disable-gnome"
