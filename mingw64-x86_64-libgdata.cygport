@@ -3,7 +3,7 @@ ORIG_PN="libgdata"
 inherit cross gnome2
 
 NAME="mingw64-x86_64-libgdata"
-VERSION=0.17.7
+VERSION=0.17.8
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GObject Google services library for Win64 toolchain"
